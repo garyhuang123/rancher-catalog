@@ -167,6 +167,7 @@ kubernetes:
         - --runtime-config=batch/v2alpha1
         - --authentication-token-webhook-config-file=/etc/kubernetes/authconfig
         - --runtime-config=authentication.k8s.io/v1beta1=true
+        - --runtime-config=extensions/v1beta1/networkpolicies=true
         {{- if eq .Values.AUDIT_LOGS "true" }}
         - --audit-log-path=-
         {{- end }}
